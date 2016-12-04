@@ -1,0 +1,30 @@
+﻿@{
+    Layout = null;
+}
+<h3>User Component</h3>
+
+<div class="panel panel-default">
+    <div class="panel-heading">User List</div>
+    <div class="panel-body">
+        <input #queryElem type="text" placeholder="Search by Name"  (keyup)="0">  
+        <table class="table table-striped">
+            <tr >
+                <th>Id</th>
+                <th>Email</th>
+                <th>Name</th>
+                <th>LastName</th>
+                <th>DateOfBirth</th>
+                <th>MontlySalary</th>
+            </tr>
+            <tr *ngFor="let user of userlist |search:queryElem.value">
+                <td>{{user.Id}}</td>
+                <td>{{user.Email}}</td>
+                <td>{{user.Name}}</td>
+                <td>{{user.LastName}}</td>
+                <td>{{user.DayOfBirth | date:'MM/dd/yyyy'}}</td>
+                <td>{{user.MontlySalary}}</td>
+            </tr>
+        </table>       
+      
+    </div>
+</div>
