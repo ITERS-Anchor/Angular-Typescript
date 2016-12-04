@@ -2,7 +2,7 @@
 import { UsersService } from "../services/users";
 import { SearchPipe } from "../search-pipe";
 
-
+//BLL
 @Component({
     selector: "users-component",
     templateUrl: "/partial/users",
