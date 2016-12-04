@@ -2,7 +2,7 @@
 import { Http } from "@angular/http";
 
 declare var JSON: any;
-
+//DAL
 @Injectable()
 export class UsersService {
     private apiUrl = "/api/v1/users/";
